@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas & Soul</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">
+    <img src="logo.jpg" alt="Ca&ullogo"><span class="logo-text">Canvas & Soul </span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow"> </p>
+      <h1>Where your imagination meets your soul</h1>
+      <p>Explore a curated collection of paintings, photography</p>
+      <a href="#gallery" class="btn">View Gallery</a>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>The Collection</h2>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="painting">Paintings</button>
+      <button class="filter" data-filter="photography">Photography</button>
+      <button class="filter" data-filter="digital">Digital</button>
+
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="section alt" id="about">
+    <h2>About the Gallery</h2>
+    <p class="about-text">
+      Ca&ul is a virtual space dedicated to showcasing emerging artists imagination.
+      Our goal is to make connectivity between imagination and soul through art and photography accessible to everyone, anywhere. Browse the
+      collection, click any piece to view it larger, and get in touch if
+      something speaks to you.
+    </p>
+    <div class="stats">
+      <div><strong id="count-art">0</strong><span>Artworks</span></div>
+      <div><strong>3</strong><span>Categories</span></div>
+      <div><strong>12</strong><span>Artists</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="form" novalidate>
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="email" id="email" placeholder="Your email" required>
+      <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formMsg" class="form-msg"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Canvas&Soul Art Gallery. All rights reserved.</p>
+  </footer>
+
+  
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Previous">&#10094;</button>
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav next" id="lbNext" aria-label="Next">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
